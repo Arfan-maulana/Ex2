@@ -83,7 +83,7 @@ namespace Ex2
                 Console.Write("Enter the number elements in the array  ");
                 string s = Console.ReadLine();
                 n = Int32.Parse(s);
-                if ((n > 0) && (n <= 20))
+                if ((n > 0) && (n <= 38))
                     break;
                 else
                     Console.WriteLine("\nArray should have minimum 1 and maximum 20 elemets.\n");
