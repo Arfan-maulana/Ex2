@@ -144,6 +144,46 @@ namespace Ex2
 
         static void Main(string[] args)
         {
+            Program myList = new Program();
+            int pilihanmu;
+            do
+            {
+                Console.WriteLine("Menu option");
+                Console.WriteLine("======================");
+                Console.WriteLine("1.Bubble Search");
+                Console.WriteLine("2.Binary Search ");
+                Console.WriteLine("3.Exit");
+                Console.WriteLine("Enter Your choice(1,2,3): ");
+                pilihanmu = Convert.ToInt32(Console.ReadLine());
+                switch (pilihanmu)
+                {
+                    case 1:
+                        Console.WriteLine("");
+                        Console.WriteLine("................");
+                        Console.WriteLine("Bubble Search");
+                        Console.WriteLine("................");
+                        myList.input();
+                        myList.BubbleSortArray();
+                        break;
+                    case 2:
+                        Console.WriteLine("");
+                        Console.WriteLine("................");
+                        Console.WriteLine("Binary Search");
+                        Console.WriteLine("................");
+                        myList.input();
+                        myList.BinarySearch();
+                        break;
+                    case 3:
+                        Console.WriteLine("Exit");
+                        break;
+                    default:
+                        Console.WriteLine("error");
+                        break;
+                }
+                //to exit from the console
+                Console.WriteLine("\n\nPress Return to exit.");
+                Console.ReadLine();
+            } while (pilihanmu != 3);
         }
     }
 }
