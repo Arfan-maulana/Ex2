@@ -112,21 +112,21 @@ namespace Ex2
                 int item = Convert.ToInt32(Console.ReadLine());
 
                 //applt binary search
-                int lowerbound = 0;
-                int upperbound = n - 1;
+                int low = 0;
+                int high = n - 1;
 
                 //obtain the index of the middle elemets
-                int mid = (lowerbound + upperbound) / 2;
+                int mid = (low + high) / 2;
                 int ctr = 1;
 
                 //loop to search for the elements in the array 
-                while ((item != fann[mid]) && (lowerbound <= upperbound))
+                while ((item != fann[mid]) && (low <= high))
                 {
                     if (item > fann[mid])
-                        lowerbound = mid + 1;
+                        low = mid + 1;
                     else
-                        upperbound = mid - 1;
-                    mid = (lowerbound + upperbound) / 2;
+                        high = mid - 1;
+                    mid = (low + high) / 2;
                     ctr++;
                 }
                 if (item == fann[mid])
