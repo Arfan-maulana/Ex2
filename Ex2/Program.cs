@@ -11,6 +11,8 @@ namespace Ex2
         //deklarasi array int dengan ukuran 38
         private int[] fann = new int[38];
 
+        //Deklarasi variable int untuk menyimpan banyaknya data pada array
+        private int n;
 
         static void Main(string[] args)
         {
