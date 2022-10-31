@@ -39,6 +39,38 @@ namespace Ex2
                 fann[i] = Int32.Parse(s);
             }
         }
+        public void display()
+        {
+            Console.WriteLine("");
+            Console.WriteLine("-----------------------------------------------");
+            Console.WriteLine(" Element array yang tersusun");
+            Console.WriteLine("----------------------------------------------");
+            for (int mm = 0; mm < n; mm++)
+            {
+                Console.WriteLine(fann[mm]);
+
+            }
+            Console.WriteLine("");
+        }
+        public void BubbleSortArray()
+        {
+            for (int i = 1; i < n; i++)
+            {
+                //pada spasi i, bandingkan n -1 elemenn pertama dengan elemen selanjutnya
+                for (int mm = 0; mm < n - i; mm++)
+                {
+                    if (fann[mm] > fann[mm + 1]) //jika elemen tidak ada dalam ururtan  yang benar
+                    {
+                        //tukar elemen
+                        int temp;
+                        temp = fann[mm];
+                        fann[mm] = fann[mm + 1];
+                        fann[mm + 1] = temp;
+
+                    }
+                }
+            }
+        }
 
         static void Main(string[] args)
         {
